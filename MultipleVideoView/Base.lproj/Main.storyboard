@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultipleVideoView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0Z-e5-Ave" customClass="AVPlayerPlaybackView" customModule="MultipleVideoView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="272.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctx-EW-Hws" customClass="AVPlayerPlaybackView" customModule="MultipleVideoView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="316.5" width="414" height="273"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueC-WJ-hi2" customClass="AVPlayerPlaybackView" customModule="MultipleVideoView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589.5" width="414" height="272.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x0Z-e5-Ave" firstAttribute="height" secondItem="Ctx-EW-Hws" secondAttribute="height" id="7rQ-wE-3hr"/>
+                            <constraint firstItem="x0Z-e5-Ave" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Awq-hL-V3l"/>
+                            <constraint firstItem="Ctx-EW-Hws" firstAttribute="top" secondItem="x0Z-e5-Ave" secondAttribute="bottom" id="Tod-LJ-EfV"/>
+                            <constraint firstItem="ueC-WJ-hi2" firstAttribute="top" secondItem="Ctx-EW-Hws" secondAttribute="bottom" id="U4c-RZ-Ypm"/>
+                            <constraint firstItem="Ctx-EW-Hws" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aMU-pP-sdt"/>
+                            <constraint firstItem="Ctx-EW-Hws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bI8-mK-1vm"/>
+                            <constraint firstItem="x0Z-e5-Ave" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cTw-PQ-BwH"/>
+                            <constraint firstItem="ueC-WJ-hi2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="roa-76-pUi"/>
+                            <constraint firstItem="x0Z-e5-Ave" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="spf-Bb-cpq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ueC-WJ-hi2" secondAttribute="bottom" id="tx0-lm-HsS"/>
+                            <constraint firstItem="ueC-WJ-hi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ukw-Fd-FPX"/>
+                            <constraint firstItem="Ctx-EW-Hws" firstAttribute="height" secondItem="ueC-WJ-hi2" secondAttribute="height" id="wx5-b9-6P6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mPlaybackView" destination="x0Z-e5-Ave" id="762-ih-A0M"/>
+                        <outlet property="mPlaybackView2" destination="Ctx-EW-Hws" id="w6A-Xe-wZ4"/>
+                        <outlet property="mPlaybackView3" destination="ueC-WJ-hi2" id="s7m-So-JVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="72.991071428571431"/>
+        </scene>
+    </scenes>
+</document>
